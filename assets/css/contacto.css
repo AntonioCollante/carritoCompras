@@ -1,0 +1,62 @@
+/*contendor contacto*/
+.contact {
+    padding: 2%;
+    border: hsl(212, 91%, 49%);
+    border-style: double;
+}
+
+/*estilos de main*/
+main {
+    margin: 25px;
+}
+
+/*color de fondo y estilos para seccion col-md-3*/
+.col-md-3 {
+    background: hsl(212, 91%, 49%);
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+.contact-info {
+    margin-top: 10%;
+}
+
+/*estilo de imagen*/
+.contact-info img {
+    margin-bottom: 15%;
+    width: 150px;
+    height: 100;
+}
+
+.contact-info h2 {
+    margin-bottom: 10%;
+}
+
+.col-md-9 {
+    background: #fff;
+    padding: 3%;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+}
+
+.contact-form label {
+    font-weight: 600;
+}
+
+/*estilo de boton*/
+.contact-form button {
+    background: #ff0000;
+    color: #f8f402;
+    font-weight: 600;
+    width: 25%;
+    margin-top: 15px;
+}
+
+.contact-form button:hover {
+    background: #ff0000;
+    color: #34fa03;
+}
+
+.form-group {
+    margin-top: 30px;
+}

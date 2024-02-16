@@ -1,0 +1,78 @@
+/*estilo para el div del titulo*/
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+/*inicio estilo para los div card*/
+.container .card:hover {
+    /*animacion para cuando el cursor entre en div*/
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgb(247, 3, 3);
+}
+
+.container .card {
+    color: #0849fc;
+    border: 1px solid #DF691A;
+    margin-bottom: 20px;
+    /*espaciado inferior*/
+}
+
+/*fin estilo para los div card*/
+
+/*INICIO MENU*/
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+/*asigna color de letra a los item de un menu*/
+.dropdown-menu .dropdown-item {
+    color: #fff;
+}
+
+/**asigna color a sub menu q tengan mas sub menus*/
+.dropend .dropdown-toggle {
+    color: rgb(253, 253, 253);
+    margin-left: 1em;
+}
+
+/**cambia color al pasar el mouse a sub menu q tengan mas sub menus*/
+.dropend .dropdown-toggle:hover {
+    background-color: rgb(13, 13, 14);
+}
+
+/**al pasar el mouse por los sub menu de cualquier item*/
+.dropdown-item:hover {
+    background-color: rgb(13, 13, 14);
+}
+
+.dropdown .dropdown-menu {
+    display: none;
+}
+
+.dropdown:hover>.dropdown-menu,
+.dropend:hover>.dropdown-menu {
+    display: block;
+    margin-top: 0.125em;
+    margin-left: 0.125em;
+}
+
+@media screen and (min-width: 769px) {
+    .dropend:hover>.dropdown-menu {
+        position: absolute;
+        top: 0;
+        left: 100%;
+    }
+
+    .dropend .dropdown-toggle {
+        margin-left: 0.5em;
+    }
+}
+
+/*FIN MENU*/
+
+.main_visual img {
+    width: 100%;
+    height: 200px;
+}

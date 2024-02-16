@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="assets/js/jquery-3.7.1.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="assets/js/jquery.validate.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/registrate.js"></script>
+    <style>
+        .border-md {
+            border-width: 1px;
+        }
+    </style>
+    <script type="text/javascript">
+        /**$.validator.setDefaults({
+            submitHandler: function () {
+                alert("submitted!");
+            }
+        });*/
+
+    </script>
+</head>
+
+<body>
+
+    <!-- inicio div donde se muestra el mensaje de alert -->
+    <div id=alert_msg></div>
+    <!-- fin div donde se muestra el mensaje de alert -->
+
+
+    <div class="container">
+        <div class="row py-5 mt-4 align-items-center">
+            <!-- For Demo Purpose -->
+            <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+                <h1>Crea una Cuenta SPORT</h1>
+                <p class="font-italic text-muted mb-0">Ingrese Todos sus datos para formar parte de SPORT.</p>
+                <img src="assets/img/imgregistrar.png" alt="" class="img-fluid mb-3 d-none d-md-block">
+            </div>
+
+            <!-- Form -->
+            <div class="col-md-7 col-lg-6 ml-auto">
+                <form id="registrarFrm" name="registrarFrm" action="#">
+                    <div class="row">
+
+                        <!-- Nombres -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 py-3 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="nombres" type="text" name="nombres" placeholder="Nombres"
+                                class="form-control bg-white border-left-0 border-md" maxlength="120">
+                        </div>
+
+                        <!-- Apellidos -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 py-3 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="apellidos" type="text" name="apellidos" placeholder="Apellidos"
+                                class="form-control bg-white border-left-0 border-md" maxlength="120">
+                        </div>
+
+                        <!-- Email -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 py-3 border-md border-right-0">
+                                    <i class="fa fa-envelope text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="email" type="email" name="email" placeholder="Email"
+                                class="form-control bg-white border-left-0 border-md" maxlength="70">
+                        </div>
+
+                        <!-- telefono -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 py-3 border-md border-right-0">
+                                    <i class="fa fa-phone-square text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="telefono" type="tel" name="telefono" placeholder="Telefono"
+                                class="form-control bg-white border-md border-left-0 pl-3" maxlength="11">
+                        </div>
+
+                        <!-- clave -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 py-3 border-md border-right-0">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="password" type="password" name="password" placeholder="Password"
+                                class="form-control bg-white border-left-0 border-md" maxlength="20"></br>
+                        </div>
+
+                        <!-- confirmar clave -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 py-3 border-md border-right-0">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="passwordConfirmation" type="password" name="passwordConfirmation" maxlength="20"
+                                placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-group col-lg-12 mx-auto mb-0">
+                            <button type="submit" id="registrar" name="registrar" class="btn btn-primary btn-sm"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">Crear Cuenta</button>
+                        </div>
+
+                        <!-- Already Registered -->
+                        <div class="text-center w-100">
+                            <p class="text-muted font-weight-bold">¿Estas Registrado? <a href="login.html"
+                                    class="text-primary ml-2">Login</a></p>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- inicio footer -->
+    <footer
+        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+        <!-- inicio Copyright -->
+        <div class="text-white mb-3 mb-md-0">
+            Copyright © 2024. Todos los derechos Reservados.
+        </div>
+        <!-- fin Copyright -->
+
+        <!-- inicio enlaces de redes sociales -->
+        <div>
+            <a href="#!" class="text-white me-4">
+                <i class="fa fa-facebook-f"></i>
+            </a>
+            <a href="#!" class="text-white me-4">
+                <i class="fa fa-twitter"></i>
+            </a>
+            <a href="#!" class="text-white me-4">
+                <i class="fa fa-google"></i>
+            </a>
+            <a href="#!" class="text-white">
+                <i class="fa fa-linkedin"></i>
+            </a>
+        </div>
+        <!-- fin enlaces de redes sociales -->
+    </footer>
+    <!-- fin footer -->
+
+</body>
+
+</html>

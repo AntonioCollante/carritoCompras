@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>SPORT | Pedidos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css" />
+    <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="assets/js/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/frmProductos.js"></script>
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+</head>
+
+<body>
+
+    <!--INICIO BANNER-->
+    <figure>
+        <p class="main_visual"><img class="img-fluid" src="assets/img/banner-consultas.jpg" alt="Visión"></p>
+    </figure>
+    <!--FIN BANNER-->
+
+    <!--INICIO MENU-->
+    <header id="header" class="claseDelDiv">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <div class="container-fluid">
+                <a class="navbar-brand fw-bold" href="#">Sport</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="inicio.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="frmProductos.html">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Pefil
+                            </a>
+                            <ul class="bg-primary dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Mis Datos</a></li>
+                                <li><a class="dropdown-item" href="#">Cambio Clave</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li class="nav-item dropend bg-primary">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Mis Pedidos
+                                    </a>
+                                    <ul class="dropdown-menu bg-primary">
+                                        <li><a class="dropdown-item" href="#">Lista Pedidos</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="frmProductos.html">Nuevo Pedido</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contactanos</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Buscar">
+                        <button class="btn btn-outline-light" type="submit">Buscar</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--FIN MENU-->
+
+    <!-- inicio div donde se muestra el mensaje de alert -->
+    <div id=alert_msg></div>
+    <!-- fin div donde se muestra el mensaje de alert -->
+
+    <!--INICIO MAIN-->
+    <div class="container">
+
+        <div class="page-header">
+            <h1>SPORT <small class="text-muted">Pedidos en linea</small></h1>
+        </div>
+
+        <!--data-bs-whatever lo usamos para coloar un valo que representa el id del producto en un arreglo js de donde sacamos el detalle de producto-->
+        <div class="row text-center">
+
+            <!--INICIO MAIN-->
+            <main id="itemsProductos" class="col-sm-8 row">
+                <!--aqui se cargan los producto desde el js-->
+            </main>
+            <!--FIN MAIN-->
+
+            <!-- Inicio Carrito -->
+            <aside class="col-sm-4">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: S/. <span id="total"></span></p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+                <button id="boton-pagar" class="btn btn-primary">Pagar</button>
+            </aside>
+            <!-- Fin Carrito -->
+
+        </div>
+    </div>
+
+    <!--INICIO FOOTER-->
+    <!--agregar fixed-bottom a class del footer para q sea fijo al mover la barra del navegador-->
+    <footer class="bg-primary text-center text-lg-start text-white">
+
+        <div class="p-4 pb-0">
+
+            <div class="row">
+                <!-- inicio enlaces -->
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>SPORT</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="inicio.html" class="nav-link p-0 text-muted">Inicio</a></li>
+                        <li class="nav-item mb-2"><a href="nosotros.html" class="nav-link p-0 text-muted">Nosotros</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="contacto.html"
+                                class="nav-link p-0 text-muted">Contactanos</a></li>
+                    </ul>
+                </div>
+                <!-- fin enlaces -->
+                <!-- inicio suscribirse -->
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form>
+                        <h5>Suscribete</h5>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                            <label for="newsletter1" class="visually-hidden">Email</label>
+                            <input id="newsletter1" type="text" class="form-control" placeholder="Email">
+                            <button class="btn btn-danger" type="button">Suscribirse</button>
+                        </div>
+                    </form>
+                </div>
+                <!-- fin suscribirse -->
+                <!-- inicio imagen -->
+                <div class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto"
+                    style="width: 150px; height: 150px;">
+                    <img src="assets/img/logofooter.avif" height="120" alt="" loading="lazy" />
+                </div>
+                <!-- fin imagen -->
+            </div>
+
+            <!-- inicio redes sociales -->
+            <section class="mb-4">
+
+                <!-- Facebook -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #3b5998;" href="#!" role="button"><i
+                        class="fa fa-facebook-f"></i></a>
+
+                <!-- Twitter -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #55acee;" href="#!" role="button"><i
+                        class="fa fa-twitter"></i></a>
+
+                <!-- Google -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #dd4b39;" href="#!" role="button"><i
+                        class="fa fa-google"></i></a>
+
+                <!-- Instagram -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #ac2bac;" href="#!" role="button"><i
+                        class="fa fa-instagram"></i></a>
+
+                <!-- Linkedin -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #0082ca;" target="_blank" href="#!"
+                    role="button"><i class="fa fa-linkedin"></i></a>
+
+                <!-- Github -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #333333;" target="_blank"
+                    href="https://github.com/AntonioCollante" role="button"><i class="fa fa-github"></i></a>
+
+                <!-- Whatsapp -->
+                <a class="btn text-white btn-floating m-1" style="background-color: #25D366;" target="_blank"
+                    href="https://github.com/AntonioCollante" role="button"><i class="fa fa-whatsapp"></i></a>
+            </section>
+            <!-- fin redes sociales -->
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2024 Copyright:
+            <a class="text-white" href="#">sport.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!--FIN FOOTER-->
+
+
+</body>
+
+<!--MODAL PARA MOSTRAR EL DETALLE DE LOS PRODUCTOS SEGUN ID-->
+<div class="modal fade" id="modalProducto" tabindex="-1" aria-labelledby="modalProductoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modalProductoLabel">Detalle del Producto</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col col-xl-10">
+                        <div class="row g-0">
+                            <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                <img src="" alt="login form" class="img-fluid" width='100%' height='190px'
+                                    id="imgModal" />
+                            </div>
+                            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                <div class="card-body p-4 p-lg-5 text-black">
+
+                                    <form>
+
+                                        <div class="d-flex align-items-center mb-3 pb-1">
+                                            <i class="fa fa-cubes fa-2x me-3"></i>
+                                            <span id="nombrePrdModal"
+                                                class="h1 fw-bold mb-0 text-primary">nombreProducto</span>
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            Antes: <label
+                                                class="form-label text-danger text-muted text-decoration-line-through"
+                                                for="form2Example17" id="precio1Modal"></label>
+                                            Ahora: <label class="form-label text-info" for="form2Example17"
+                                                id="precio2Modal"></label>
+                                        </div>
+
+                                        <p class="mb-5 pb-lg-2 text-success" id="descripModal">
+
+                                            <!--div para mostrar colores y tallas del producto-->
+                                        <div class="row g-0">
+                                            <div id="divColores" class="col-md-6 col-lg-5 d-none d-md-block text-info">
+                                            </div>
+                                            <div id="divTallas" class="col-md-6 col-lg-5 d-none d-md-block text-info">
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+<!--MODAL PAGAR CARRITO -->
+<div class="modal fade" id="modalPagar" tabindex="-1" aria-labelledby="modalPagarLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="mb-3"><a href="#!" class="text-body" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-long-arrow-alt-left me-2"></i>Continuar
+                        Comprando</a></h5>
+            </div>
+            <div class="modal-body">
+
+                <section class="h-100 h-custom">
+                    <div class="h-100">
+                        <div class="row d-flex justify-content-center align-items-center h-100">
+                            <div class="col">
+                                <div class="card">
+                                    <div class="card-body p-4">
+
+                                        <div class="row">
+
+                                            <!--INICIO DIV DONDE SE MUESTRAN  LOS PRODUCTOS -->
+                                            <div class="col-lg-7">
+                                                <!--INICIO DIV DONDE SE DIBUJAN LOS ELEMENTOS DEL CARRITO -->
+                                                <div id="divPagarCarrito">
+                                                </div>
+                                                <!--FIN DIV DONDE SE DIBUJAN LOS ELEMENTOS DEL CARRITO -->
+                                            </div>
+                                            <!--FIN DIV DONDE SE MUESTRAN  LOS PRODUCTOS -->
+
+                                            <!--INICIO DIV PAGOS -->
+                                            <div class="col-lg-5">
+
+                                                <div class="card bg-secondary bg-gradient text-white rounded-3">
+                                                    <div class="card-body">
+                                                        <div
+                                                            class="d-flex justify-content-between align-items-center mb-4">
+                                                            <h5 class="mb-0">Detalle de Tarjeta</h5>
+                                                            <img src="assets/img/logopagos.png"
+                                                                class="img-fluid rounded-3" style="width: 45px;"
+                                                                alt="Avatar">
+                                                        </div>
+
+                                                        <p class="small mb-2">Tipo de Tarjeta</p>
+                                                        <a href="#!" type="submit" class="text-white"><i
+                                                                class="fa fa-cc-mastercard fa-2x me-2"></i></a>
+                                                        <a href="#!" type="submit" class="text-white"><i
+                                                                class="fa fa-cc-visa fa-2x me-2"></i></a>
+                                                        <a href="#!" type="submit" class="text-white"><i
+                                                                class="fa fa-cc-amex fa-2x me-2"></i></a>
+                                                        <a href="#!" type="submit" class="text-white"><i
+                                                                class="fa fa-cc-paypal fa-2x"></i></a>
+
+                                                        <form class="mt-4">
+                                                            <div class="form-outline form-white mb-4">
+                                                                <input type="text" id="nombreTitular" pattern="[A-Za-z]"
+                                                                    class="form-control form-control-lg" siez="17"
+                                                                    placeholder="Titular de la Tarjeta" />
+                                                                <label class="form-label" for="nombreTitular">Titular de
+                                                                    la Tarjeta</label>
+                                                            </div>
+
+                                                            <div class="form-outline form-white mb-4">
+                                                                <input type="text" id="numTarjeta"
+                                                                    class="form-control form-control-lg" siez="17"
+                                                                    placeholder="1234 5678 9012 3457" minlength="19"
+                                                                    maxlength="19" />
+                                                                <label class="form-label" for="numTarjeta">Número de
+                                                                    Tarjeta</label>
+                                                            </div>
+
+                                                            <div class="row mb-4">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-outline form-white">
+                                                                        <input type="text" id="expiracion"
+                                                                            class="form-control form-control-lg"
+                                                                            placeholder="MM/YYYY" size="7" id="exp"
+                                                                            minlength="7" maxlength="7" />
+                                                                        <label class="form-label"
+                                                                            for="expiracion">Expiración</label>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6">
+                                                                    <div class="form-outline form-white">
+                                                                        <input type="password" id="cvv"
+                                                                            class="form-control form-control-lg"
+                                                                            placeholder="&#9679;&#9679;&#9679;" size="1"
+                                                                            minlength="3" maxlength="3" />
+                                                                        <label class="form-label" for="cvv">CVV</label>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                        </form>
+
+                                                        <hr class="my-4">
+                                                        <!--INICIO DIV DONDE SE DIBUJAN LOS TOTALES -->
+                                                        <div id="totalPagarCarrito">
+                                                        </div>
+                                                        <!--INICIO DIV DONDE SE DIBUJAN LOS TOTALES -->
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--FIN DIV PAGOS -->
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+
+
+</html>
