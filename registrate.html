@@ -17,14 +17,6 @@
             border-width: 1px;
         }
     </style>
-    <script type="text/javascript">
-        /**$.validator.setDefaults({
-            submitHandler: function () {
-                alert("submitted!");
-            }
-        });*/
-
-    </script>
 </head>
 
 <body>
@@ -89,6 +81,7 @@
                                 </span>
                             </div>
                             <input id="telefono" type="tel" name="telefono" placeholder="Telefono"
+                                onkeypress="return '0123456789'.includes(event.key)"
                                 class="form-control bg-white border-md border-left-0 pl-3" maxlength="11">
                         </div>
 

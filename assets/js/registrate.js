@@ -29,25 +29,25 @@ $(function () {
         },
         messages: {
             nombres: {
-                required: "Porfavor ingrese su Nombre.",
+                required: "Por favor ingrese su Nombre.",
                 minlength: "El nombre como minimo debe tener 5 caracteres."
             },
             apellidos: {
-                required: "Porfavor ingrese su Apellido.",
+                required: "Por favor ingrese su Apellido.",
                 minlength: "El Apellido como minimo debe tener 5 caracteres."
             },
             email: {
-                required: "Porfavor Ingrese su correo electronico.",
+                required: "Por favor Ingrese su correo electronico.",
                 email: "Correo invalido",
                 regex: "Ingrese un email valido."
             },
             password: {
-                required: "Porfavor ingrese su contraseña.",
+                required: "Por favor ingrese su contraseña.",
                 minlength: "Contraseña demasiado corta",
                 pwcheck: "La contraseña no cumple el formato correcto"
             },
             passwordConfirmation: {
-                required: "Porfavor ingrese nuevamente su contraseña.",
+                required: "Por favor ingrese nuevamente su contraseña.",
                 equalTo: "Las Contraseñas no coinciden."
             },
             telefono: "Ingrese Telefono."

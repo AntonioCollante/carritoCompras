@@ -86,7 +86,7 @@ const datosProductos = [
 
 ];
 
-const moneda ="S/.";
+const moneda = "S/.";
 
 //Expresion regular para validar formato de correo
 var expRegEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$/;
@@ -122,8 +122,38 @@ function validarContraseña(p1) {
         || !p1.match(/[A-Z]/) //validar letra mayúscula
         || !p1.match(/\d/) //validar numero
         || noValido.test(p1) // se chequea el regex de que el string no tenga espacio
-        ) {
+    ) {
         return false;
     }
     return true;
+}
+
+//validar solo letras
+function soloLetras(e) {
+    key = e.keyCode || e.which;
+    tecla = String.fromCharCode(key).toLowerCase();
+    letras = " áéíóúabcdefghijklmnñopqrstuvwxyz";
+    especiales = [8, 37, 39, 46];
+
+    tecla_especial = false
+    for (var i in especiales) {
+        if (key == especiales[i]) {
+            tecla_especial = true;
+            break;
+        }
+    }
+
+    if (letras.indexOf(tecla) == -1 && !tecla_especial)
+        return false;
+}
+
+//si es diferente de numero lo limpia
+function limpia() {
+    var val = $("#nombreTitular").val();
+    var tam = val.length;
+    for (i = 0; i < tam; i++) {
+        if (!isNaN(val[i])) {
+            $("#nombreTitular").val() = '';
+        }
+    }
 }
